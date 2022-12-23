@@ -1,12 +1,9 @@
-const endPoint = 'https://restcountries.com/v3.1/name/';
-const nextFields = '?fields=name,capital,flags,languages,population';
-
 export function fetchCountries(name) {
-  const URL_API = '${endPoint}${name}${nextFields}';
-  fetch(URL_API).then(response => {
-    if (!response.ok) {
+  const URL_API = `https://restcountries.com/v3.1/name/${name}?fields=name,capital,flags,languages,population`;
+  return fetch(URL_API).then(response => {
+    if (response.status !== 200) {
       throw new Error(response.status);
     }
-    return response.json;
+    return response.json();
   });
 }

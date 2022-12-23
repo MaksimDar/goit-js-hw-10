@@ -14,7 +14,30 @@ body {
 
 #search-box {
   font: inherit;
-  padding: 8px;
-  max-width: 320px;
-  margin-bottom: 16px;
+  padding: 10px;
+  width: 360px;
+  margin-bottom: 18px;
+}
+.list {
+  list-style: none;
+}
+
+.country-item {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.name {
+  margin: 0;
+  color: blue;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  font-size: 18px;
 }
